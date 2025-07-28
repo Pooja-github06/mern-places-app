@@ -40,7 +40,6 @@ const NewPlace = () => {
 
     const history = useHistory();
     const placeSubmitHandler = async event => {
-        alert('places---')
         event.preventDefault();
         console.log(formState.inputs, 'formstate-------'); // send this to the backend!a
 

@@ -65,7 +65,6 @@ const Auth = () => {
         // console.log('🧪 Backend URL:', process.env.REACT_APP_BACKEND_URL);
 
         if (isLoginMode) {
-            alert('login')
             try {
 
                 const responseData = await sendRequest(`${process.env.REACT_APP_BACKEND_URL}/users/login`, 'POST',
@@ -89,7 +88,6 @@ const Auth = () => {
                 formData.append('email', formState.inputs.email.value)
                 formData.append('password', formState.inputs.password.value)
                 formData.append('image', formState.inputs.image.value)
-                alert('signup')
                 console.log(`${process.env.REACT_APP_BACKEND_URL}/users/signup`, formData, 'userssssignup')
                 const responseData = await sendRequest(`${process.env.REACT_APP_BACKEND_URL}/users/signup`, 'POST',
                     formData
